@@ -2,7 +2,14 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-700 text-white py-8">
+    <footer className="relative text-white py-20">
+      <div
+        className="absolute -z-10 inset-0 bg-cover bg-center"
+        // style={{ backgroundImage: "url('/modern-train.avif')" }}
+        style={{ backgroundImage: "url('/5.webp')" }}
+      >
+        <div className="bg-green-600/90 h-full w-full"></div>
+      </div>
       <div className="container mx-auto px-4 text-center">
         {/* Monopoly-themed Elements */}
         <div className="flex justify-center items-center gap-6 mb-4">

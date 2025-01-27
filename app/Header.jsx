@@ -7,18 +7,16 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="container mx-auto fixed z-50 top-3 left-1/2 rounded-lg -translate-x-1/2 bg-red-800/70 backdrop-blur text-white px-4 py-3 shadow-md">
+    <header className="container mx-auto fixed z-50 md:top-3 top-0 left-1/2 md:rounded-lg -translate-x-1/2 bg-red-800/70 backdrop-blur text-white px-4 py-3 shadow-md">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
             src="/monopoly-logo.jpg"
             alt="Monopoly Logo"
-            className="w-12 h-12"
+            className="md:w-12 w-10 md:h-12 h-10"
           />
-          <h1 className="text-xl font-bold md:block hidden">
-            Monopoly Community
-          </h1>
+          <h1 className="md:text-xl text-lg font-bold">Monopoly Community</h1>
         </div>
 
         {/* Menu Icon (Mobile) */}
@@ -26,7 +24,7 @@ const Header = () => {
           className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
+          {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
 
         {/* Navigation */}

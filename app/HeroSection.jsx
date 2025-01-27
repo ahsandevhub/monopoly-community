@@ -9,7 +9,7 @@ const HeroSection = () => {
   const [isSpinning, setIsSpinning] = useState(true);
 
   return (
-    <section className="relative bg-white text-center h-screen flex items-center justify-center">
+    <section className="relative bg-white text-center min-h-screen py-[100px] sm:py-0 flex items-center justify-center">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -19,8 +19,8 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto px-4 container flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20">
-        <div className="left bg-gray-900/30 border-4 border-orange-400/50 backdrop-blur-sm p-10 rounded-lg flex flex-col items-center md:items-start text-center md:text-left">
+      <div className="relative z-10 mx-auto px-4 container flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-20">
+        <div className="left z-10 bg-gray-900/30 border-4 border-orange-400/50 backdrop-blur-sm p-10 rounded-lg flex flex-col items-center md:items-start text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold text-red-600 drop-shadow-lg">
             Own the Board, Rule the Crypto World!
           </h1>
@@ -50,13 +50,13 @@ const HeroSection = () => {
         {/* Spinning Coin Animation */}
         <div className="relative flex justify-center w-full md:max-w-[40%]">
           {/* Monopoly Board */}
-          <div className="absolute -top-[150px] transform h-[200%] w-[200%]">
+          <div className="absolute md:-top-[180px] -top-20 transform md:h-[200%] md:w-[200%]">
             <Image
               src="/monopoly-board.png"
               alt="Monopoly Board"
               width={500}
               height={500}
-              className="object-contain h-full w-full"
+              className="object-contain md:h-full md:w-full"
             />
           </div>
 
