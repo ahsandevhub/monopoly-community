@@ -2,11 +2,22 @@
 
 import Coin from "@/public/coin.png";
 import { motion } from "framer-motion";
+import { Check, Copy } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 const HeroSection = () => {
   const [isSpinning, setIsSpinning] = useState(true);
+  const [copied, setCopied] = useState(false);
+
+  const contractAddress = "6RS2so7t41LAWWtvD3CnPdRLQPtfBuoPUVVCQpQKmoon";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(contractAddress).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+    });
+  };
 
   return (
     <section className="relative bg-white text-center min-h-screen py-[100px] sm:py-0 flex items-center justify-center">
@@ -28,6 +39,21 @@ const HeroSection = () => {
             The game where your holdings decide your empire. Build wealth,
             dominate the board, and flex your assets.
           </p>
+
+          {/* Contract Address with Copy Icon */}
+          <div
+            className={`mt-6 flex items-center justify-center gap-2 text-xl text-slate-50 cursor-pointer transition ${
+              copied ? "bg-green-500" : "bg-orange-400"
+            } px-4 py-2 rounded font-bold`}
+            onClick={handleCopy}
+          >
+            <span>CA: {contractAddress}</span>
+            {copied ? (
+              <Check className="text-white w-5 h-5" />
+            ) : (
+              <Copy className="text-white w-5 h-5" />
+            )}
+          </div>
 
           {/* Call-to-Action Buttons */}
           <div className="mt-8 flex flex-col md:flex-row justify-center gap-6">
