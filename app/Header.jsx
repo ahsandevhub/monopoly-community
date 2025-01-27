@@ -29,7 +29,7 @@ const Header = () => {
 
         {/* Navigation */}
         <nav
-          className={`absolute md:static top-16 left-0 w-full md:w-auto bg-red-600 md:bg-transparent shadow-md md:shadow-none md:flex ${
+          className={`absolute md:static top-16 left-0 w-full md:w-auto bg-red-800 md:bg-transparent shadow-md md:shadow-none md:flex ${
             isOpen ? "block" : "hidden"
           }`}
         >

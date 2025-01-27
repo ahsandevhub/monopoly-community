@@ -32,7 +32,7 @@ const HeroSection = () => {
           {/* Call-to-Action Buttons */}
           <div className="mt-8 flex flex-col md:flex-row justify-center gap-6">
             <a
-              href="https://pancakeswap.finance"
+              href="https://dexscreener.com/solana/6rs2so7t41lawwtvd3cnpdrlqptfbuopuvvcqpqkmoon"
               target="_blank"
               className="bg-green-600 text-white px-8 py-3 rounded-xl shadow-lg text-lg font-semibold hover:bg-green-700 transition"
             >
@@ -56,7 +56,7 @@ const HeroSection = () => {
               alt="Monopoly Board"
               width={500}
               height={500}
-              className="object-contain md:h-full md:w-full"
+              className="object-contain md:h-full md:w-full drop-shadow-[0_20px_40px_rgb(0,0,0)]"
             />
           </div>
 
