@@ -7,8 +7,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-red-600 text-white py-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center px-4">
+    <header className="container mx-auto fixed z-50 top-3 left-1/2 rounded-lg -translate-x-1/2 bg-red-800/70 backdrop-blur text-white px-4 py-3 shadow-md">
+      <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
@@ -16,7 +16,9 @@ const Header = () => {
             alt="Monopoly Logo"
             className="w-12 h-12"
           />
-          <h1 className="text-2xl font-bold">Monopoly Community</h1>
+          <h1 className="text-xl font-bold md:block hidden">
+            Monopoly Community
+          </h1>
         </div>
 
         {/* Menu Icon (Mobile) */}
@@ -33,7 +35,7 @@ const Header = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <ul className="flex flex-col md:flex-row gap-6 text-lg font-medium md:items-center md:gap-8 p-4 md:p-0">
+          <ul className="flex flex-col md:flex-row gap-6 font-medium md:items-center md:gap-8 p-4 md:p-0">
             <li>
               <a href="/" className="hover:text-green-400 transition">
                 Home
