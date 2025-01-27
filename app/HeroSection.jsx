@@ -48,7 +48,7 @@ const HeroSection = () => {
         </div>
 
         {/* Spinning Coin Animation */}
-        <div className="relative flex justify-center w-full md:max-w-[40%]">
+        <div className="relative flex justify-center w-full md:max-w-[40%] mb-10 md:mb-0">
           {/* Monopoly Board */}
           <div className="absolute md:-top-[180px] -top-20 transform md:h-[200%] md:w-[200%]">
             <Image
