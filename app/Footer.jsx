@@ -6,36 +6,29 @@ const Footer = () => {
       <div
         className="absolute -z-10 inset-0 bg-cover bg-center"
         // style={{ backgroundImage: "url('/modern-train.avif')" }}
-        style={{ backgroundImage: "url('/5.webp')" }}
+        style={{ backgroundImage: "url('/support.webp')" }}
       >
-        <div className="bg-green-600/90 h-full w-full"></div>
+        <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 h-full w-full"></div>
       </div>
       <div className="container mx-auto px-4 text-center">
-        {/* Monopoly-themed Elements */}
-        <div className="flex justify-center items-center gap-6 mb-4">
-          <img src="/icons/rail.png" alt="Train Icon" className="w-10 h-10" />
-          <img src="/icons/money.png" alt="Money Icon" className="w-10 h-10" />
-          <img src="/icons/dice.png" alt="Dice Icon" className="w-10 h-10" />
-        </div>
-
         {/* Social Media Links */}
         <div className="flex justify-center gap-6 mb-4 text-lg">
           <Link
-            href="https://discord.com"
+            href="https://dexscreener.com/solana/6rs2so7t41lawwtvd3cnpdrlqptfbuopuvvcqpqkmoon"
             target="_blank"
             className="hover:text-yellow-400 transition"
           >
-            Discord
+            Dexscreener
           </Link>
           <Link
-            href="https://telegram.org"
+            href="https://t.me/monopolymemecoin"
             target="_blank"
             className="hover:text-yellow-400 transition"
           >
             Telegram
           </Link>
           <Link
-            href="https://twitter.com"
+            href="https://x.com/Collect2PassGo"
             target="_blank"
             className="hover:text-yellow-400 transition"
           >

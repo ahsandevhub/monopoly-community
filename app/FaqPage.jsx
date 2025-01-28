@@ -23,7 +23,8 @@ const FaqPage = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-800 to-gray-700 py-12 md:py-[150px] px-4">
+    <div className="relative bg-gradient-to-br from-gray-800 to-gray-700 py-12 md:py-[150px] px-4">
+      <div id="faq" className="absolute -top-10"></div>
       <h2 className="md:text-4xl text-3xl font-bold text-center text-slate-100 mb-8">
         Frequently Asked Questions
       </h2>
