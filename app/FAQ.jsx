@@ -7,12 +7,12 @@ const FAQ = () => {
     {
       question: "I'm a top holder, how much do I receive from Airlock.sol?",
       answer:
-        "We snapshot the current top 50 holders just before each airdrop. These top holders share 90% of the rewards. \nFor example, if a wallet starting with 58u.. holds 11.55% of the total supply, they will be eligible for 11.55% x 90% = 10.39% of the rewards. \nSimilarly, the creator wallet EBsc... is eligible for 9.7% x 90% = 8.73%. For a token with $1M in day-1 trading, the first airdrop will pay out around $40k in rewards. Meteora fees are stored in the pool and are subject to impermanent losses if the token price drops.",
+        "We snapshot the current top 50 holders just before each airdrop. These top holders share 90% of the rewards. For example, if a wallet starting with 58u.. holds 11.55% of the total supply, they will be eligible for 11.55% x 90% = 10.39% of the rewards. Similarly, the creator wallet EBsc... is eligible for 9.7% x 90% = 8.73%. For a token with $1M in day-1 trading, the first airdrop will pay out around $40k in rewards. Meteora fees are stored in the pool and are subject to impermanent losses if the token price drops.",
     },
     {
       question: "Do I need to claim my rewards?",
       answer:
-        "No, there's no longer any need for top holders to claim their rewards. \nHowever, for tokens bonded before October 7th, creators and the static top 50 holders still need to claim from the token UI. \nTo claim, visit the pool on the Meteora app, connect your wallet, and hit the claim button to collect your fees.",
+        "No, there's no longer any need for top holders to claim their rewards. However, for tokens bonded before October 7th, creators and the static top 50 holders still need to claim from the token UI. To claim, visit the pool on the Meteora app, connect your wallet, and hit the claim button to collect your fees.",
     },
   ];
 
