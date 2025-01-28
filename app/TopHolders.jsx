@@ -37,15 +37,23 @@ const TopHolders = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-[#6e5751] to-[#3578ac] relative">
-      <div id="leaderboard" className="absolute -top-10"></div>
-      <div className="container mx-auto sm:py-20 py-10 px-4">
+    <div
+      className="relative bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/C11u31-uHnS._SX1920_QL65_FMwebp_.webp')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gray-800/80"></div>
+
+      {/* Content */}
+      <div className="relative container mx-auto sm:py-20 py-10 px-4">
         <h2 className="md:col-span-2 md:mb-12 mb-8 text-center md:text-4xl text-3xl text-slate-100 font-bold">
           Top Holders
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Holders Table */}
-          <table className="table-auto bg-slate-800 sm:text-base text-xs w-full text-center rounded-xl border border-slate-200 overflow-hidden text-slate-100 border-collapse">
+          <table className="table-auto bg-slate-800/50 backdrop-blur sm:text-base text-xs w-full text-center md:rounded-xl rounded-md border border-slate-200 overflow-hidden text-slate-100 border-collapse">
             <thead>
               <tr className="bg-slate-700 *:px-1 *:py-2 *:sm:p-4 *:border *:border-slate-500">
                 <th>#</th>
@@ -60,7 +68,7 @@ const TopHolders = () => {
               {holders.map((holder, index) => (
                 <tr
                   key={index}
-                  className="hover:bg-slate-600 *:px-1 *:py-2 *:sm:p-2 *:border *:border-slate-500"
+                  className="hover:bg-slate-600/50 *:px-1 *:py-2 *:sm:p-2 *:border *:border-slate-500"
                 >
                   <td>{index + 1}</td>
                   <td className="sm:w-20 w-16">

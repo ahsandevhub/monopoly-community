@@ -31,6 +31,7 @@ export async function GET(req) {
     // Fetch the top holders, sort by percentage in descending order, and limit to 22
     const topHolders = await Holder.find()
       .sort({ Percentage: -1 }) // Sorting by percentage in descending order
+      .skip(1)
       .limit(22); // Limiting to top 22 holders
 
     // Send the top holders data as a response
