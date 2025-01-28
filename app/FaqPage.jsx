@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const FAQ = () => {
+const FaqPage = () => {
   const faqs = [
     {
       question: "I'm a top holder, how much do I receive from Airlock.sol?",
@@ -60,4 +60,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default FaqPage;
