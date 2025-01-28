@@ -1,5 +1,5 @@
 import About from "./About";
-import FAQ from "./Faq";
+import Faq from "./Faq";
 import HeroSection from "./HeroSection";
 // import TokenStats from "./TokenStats";
 import TopHolders from "./TopHolders";
@@ -11,7 +11,7 @@ const HomePage = () => {
       <About />
       {/* <TokenStats /> */}
       <TopHolders />
-      <FAQ />
+      <Faq />
     </>
   );
 };

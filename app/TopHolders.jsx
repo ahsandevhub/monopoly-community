@@ -37,15 +37,15 @@ const TopHolders = () => {
   }
 
   return (
-    <div className="bg-gray-800 relative">
+    <div className="bg-gradient-to-br from-[#6e5751] to-[#3578ac] relative">
       <div id="leaderboard" className="absolute -top-10"></div>
-      <div className="container max-w-4xl mx-auto sm:py-20 py-10 px-4">
-        <h2 className="md:col-span-2 text-center sm:text-4xl text-2xl text-slate-100 font-bold mb-4">
+      <div className="container mx-auto sm:py-20 py-10 px-4">
+        <h2 className="md:col-span-2 md:mb-12 mb-8 text-center md:text-4xl text-3xl text-slate-100 font-bold">
           Top Holders
         </h2>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Holders Table */}
-          <table className="table-auto sm:text-base text-xs w-full text-center text-slate-100 border-collapse">
+          <table className="table-auto bg-slate-800 sm:text-base text-xs w-full text-center rounded-xl border border-slate-200 overflow-hidden text-slate-100 border-collapse">
             <thead>
               <tr className="bg-slate-700 *:px-1 *:py-2 *:sm:p-4 *:border *:border-slate-500">
                 <th>#</th>
@@ -63,7 +63,7 @@ const TopHolders = () => {
                   className="hover:bg-slate-600 *:px-1 *:py-2 *:sm:p-2 *:border *:border-slate-500"
                 >
                   <td>{index + 1}</td>
-                  <td className="sm:w-32 w-16">
+                  <td className="sm:w-20 w-16">
                     <Image
                       src={`/properties/${propertiesData[index]?.property}.jpg`}
                       height={300}
@@ -80,6 +80,35 @@ const TopHolders = () => {
               ))}
             </tbody>
           </table>
+
+          {/* Properties owned by */}
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-4">
+            {holders.map((holder, index) => (
+              <div
+                key={index}
+                className="relative bg-gray-800 rounded-lg border border-gray-400 shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl"
+              >
+                <Image
+                  src={`/properties/${propertiesData[index]?.property}.jpg`}
+                  height={500}
+                  width={500}
+                  alt={propertiesData[index]?.property}
+                  className="w-full aspect-square object-cover"
+                />
+                <div className="p-2">
+                  <p className="text-center sm:text-lg text-base font-semibold text-slate-100">
+                    {propertiesData[index]?.property}
+                  </p>
+                  <p className="text-center text-sm text-slate-400">
+                    Owner: {formatAccount(holder.Account)}
+                  </p>
+                </div>
+                <div className="absolute top-2 left-2 border-2 text-white border-slate-50 z-10 h-8 w-8 flex items-center justify-center bg-red-600 shadow-lg rounded-full">
+                  {index + 1}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

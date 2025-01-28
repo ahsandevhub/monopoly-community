@@ -23,19 +23,19 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-sky-800 py-12 px-4">
-      <h2 className="text-4xl font-bold text-center text-slate-100 mb-8">
+    <div className="bg-gradient-to-br from-gray-800 to-gray-700 py-12 md:py-[150px] px-4">
+      <h2 className="md:text-4xl text-3xl font-bold text-center text-slate-100 mb-8">
         Frequently Asked Questions
       </h2>
       <div className="max-w-4xl mx-auto space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-sky-600 rounded-lg overflow-hidden"
+            className="border border-gray-600 rounded-lg overflow-hidden"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full text-left bg-sky-700 px-4 py-3 text-slate-100 flex justify-between items-center"
+              className="w-full text-left bg-gray-700 px-4 py-3 text-slate-100 flex justify-between items-center"
             >
               <span className="font-semibold">{faq.question}</span>
               <span
@@ -49,7 +49,7 @@ const FAQ = () => {
             <div
               className={`transition-max-height duration-300 overflow-hidden ${
                 openIndex === index ? "max-h-[200px] p-4" : "max-h-0"
-              } bg-sky-600 text-slate-200`}
+              } bg-gray-600 text-slate-200`}
             >
               {faq.answer}
             </div>
