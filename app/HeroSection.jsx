@@ -2,7 +2,7 @@
 
 import Coin from "@/public/coin.png";
 import { motion } from "framer-motion";
-import { Check, Copy } from "lucide-react";
+import { Check, Copy, TicketCheckIcon, Trophy } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -20,7 +20,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative bg-white text-center min-h-screen py-[100px] sm:py-0 flex items-center justify-center">
+    <section
+      id="home"
+      className="relative bg-white text-center min-h-screen py-[100px] sm:py-0 flex items-center justify-center"
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -31,8 +34,8 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 mx-auto px-4 container flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-20">
-        <div className="left z-10 bg-gray-900/30 border-4 border-orange-400/50 backdrop-blur-sm p-10 rounded-lg flex flex-col items-center md:items-start text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-red-600 drop-shadow-lg">
+        <div className="left z-10 bg-gray-900/30 border-4 border-green-500 backdrop-blur-sm sm:p-10 p-4 rounded-lg flex flex-col items-center md:items-start text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl font-bold text-orange-600 drop-shadow-lg">
             Own the Board, Rule the Crypto World!
           </h1>
           <p className="text-lg md:text-xl text-gray-50 mt-4 max-w-3xl">
@@ -42,18 +45,13 @@ const HeroSection = () => {
 
           {/* Contract Address with Copy Icon */}
           <div
-            className={`mt-6 flex items-center justify-center gap-2 text-xl text-slate-50 cursor-pointer transition ${
-              copied ? "bg-green-500/80" : "bg-orange-400/80"
-            } ps-4 overflow-hidden rounded`}
+            className={`mt-6 flex flex-col md:flex-row items-center justify-center gap-2 md:text-xl text-base text-slate-50 cursor-pointer transition ${
+              copied ? "bg-purple-500/80" : "bg-blue-400/80"
+            } p-4 overflow-hidden rounded`}
             onClick={handleCopy}
           >
-            <span
-              className="break-all
-"
-            >
-              CA: {contractAddress}
-            </span>
-            <div className="bg-amber-400 rounded h-full p-3">
+            <span className="break-all fira-code">CA: {contractAddress}</span>
+            <div className="bg-orange-500 rounded h-full p-3">
               {copied ? (
                 <Check className="text-white" />
               ) : (
@@ -67,15 +65,15 @@ const HeroSection = () => {
             <a
               href="https://dexscreener.com/solana/6rs2so7t41lawwtvd3cnpdrlqptfbuopuvvcqpqkmoon"
               target="_blank"
-              className="bg-green-600 text-white px-8 py-3 rounded-xl shadow-lg text-lg font-semibold hover:bg-green-700 transition"
+              className="bg-green-600 flex justify-center items-center gap-2 text-white px-5 py-3 rounded-md shadow-lg font-semibold hover:bg-green-700 transition"
             >
-              Buy Now
+              <TicketCheckIcon /> Buy Now
             </a>
             <a
               href="#leaderboard"
-              className="bg-red-600 text-white px-8 py-3 rounded-xl shadow-lg text-lg font-semibold hover:bg-red-700 transition"
+              className="bg-red-600 flex justify-center items-center gap-2 text-white px-5 py-3 rounded-md shadow-lg font-semibold hover:bg-red-700 transition"
             >
-              Explore Leaderboard
+              <Trophy /> Explore Leaderboard
             </a>
           </div>
         </div>

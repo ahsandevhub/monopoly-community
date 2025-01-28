@@ -1,0 +1,54 @@
+[
+  { "id": 1, "property": "Boardwalk", "color": "Dark Blue", "value": 400 },
+  { "id": 2, "property": "Park Place", "color": "Dark Blue", "value": 350 },
+  {
+    "id": 3,
+    "property": "Pennsylvania Avenue",
+    "color": "Green",
+    "value": 320
+  },
+  {
+    "id": 4,
+    "property": "North Carolina Avenue",
+    "color": "Green",
+    "value": 300
+  },
+  { "id": 5, "property": "Pacific Avenue", "color": "Green", "value": 300 },
+  { "id": 6, "property": "Marvin Gardens", "color": "Yellow", "value": 280 },
+  { "id": 7, "property": "Ventnor Avenue", "color": "Yellow", "value": 260 },
+  { "id": 8, "property": "Atlantic Avenue", "color": "Yellow", "value": 260 },
+  { "id": 9, "property": "Illinois Avenue", "color": "Red", "value": 240 },
+  { "id": 10, "property": "Indiana Avenue", "color": "Red", "value": 220 },
+  { "id": 11, "property": "Kentucky Avenue", "color": "Red", "value": 220 },
+  { "id": 12, "property": "New York Avenue", "color": "Orange", "value": 200 },
+  { "id": 13, "property": "Tennessee Avenue", "color": "Orange", "value": 180 },
+  { "id": 14, "property": "St. James Place", "color": "Orange", "value": 180 },
+  { "id": 15, "property": "Virginia Avenue", "color": "Pink", "value": 160 },
+  { "id": 16, "property": "States Avenue", "color": "Pink", "value": 140 },
+  { "id": 17, "property": "St. Charles Place", "color": "Pink", "value": 140 },
+  {
+    "id": 18,
+    "property": "Connecticut Avenue",
+    "color": "Light Blue",
+    "value": 120
+  },
+  {
+    "id": 19,
+    "property": "Vermont Avenue",
+    "color": "Light Blue",
+    "value": 100
+  },
+  {
+    "id": 20,
+    "property": "Oriental Avenue",
+    "color": "Light Blue",
+    "value": 100
+  },
+  { "id": 21, "property": "Baltic Avenue", "color": "Brown", "value": 60 },
+  {
+    "id": 22,
+    "property": "Mediterranean Avenue",
+    "color": "Brown",
+    "value": 60
+  }
+]
