@@ -27,7 +27,7 @@ const About = () => {
 
         {/* Right Side - About Section */}
         <div className="bg-white/10 backdrop-blur-lg border border-white/30 md:p-8 p-4 rounded-lg shadow-lg text-center md:text-left">
-          <h1 className="text-3xl font-bold text-[#f70400] mb-4">
+          <h1 className="text-3xl font-bold text-yellow-500 mb-4">
             What is Monopoly?
           </h1>
           <p className="text-lg text-white mb-4">

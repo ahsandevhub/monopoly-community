@@ -55,7 +55,7 @@ const Tokenomics = () => {
         </a>
 
         {/* Airdrop Schedule */}
-        <div className="mt-12 text-left max-w-2xl mx-auto bg-gray-900/80 p-6 rounded-lg border border-gray-600">
+        <div className="mt-12 text-left max-w-4xl mx-auto bg-gray-900/80 p-6 rounded-lg border border-gray-600">
           <h3 className="text-2xl font-bold text-yellow-300 mb-4">
             Airdrop Schedule
           </h3>

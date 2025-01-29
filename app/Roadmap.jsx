@@ -3,70 +3,71 @@
 const Roadmap = () => {
   const phases = [
     {
-      title: "Phase 1: Building the Foundation",
+      title: "Phase 1 - Core Development",
       items: [
         {
-          emoji: "🎩",
-          name: "Launch & Community Growth",
+          emoji: "🏠",
+          name: "Smart Contract for Property Ownership & Trading",
           description:
-            "Establish the $MONO brand, grow an active community, and partner with influencers to increase awareness.",
-        },
-        {
-          emoji: "🚂",
-          name: "Game Mechanics Development",
-          description:
-            "Design the PVP Monopoly-inspired wagering system and implement staking solutions for rewarding holders.",
-        },
-      ],
-    },
-    {
-      title: "Phase 2: Expanding the Ecosystem",
-      items: [
-        {
-          emoji: "🖼",
-          name: "Exclusive NFT Drop",
-          description:
-            "Release limited-edition Monopoly NFTs for the top 22 holders, offering in-game perks and collectible art.",
-        },
-        {
-          emoji: "🎶",
-          name: "Community Anthem",
-          description:
-            "Collaborate with artists to create an anthem for $MONO marketing and events.",
-        },
-      ],
-    },
-    {
-      title: "Phase 3: PVP Wagering Game Launch",
-      items: [
-        {
-          emoji: "🎮",
-          name: "Beta Test the PVP Monopoly Wagering Game",
-          description:
-            "Invite community members to test the game and refine it based on feedback.",
+            "Develop smart contracts to enable NFT-based property ownership and trading on Solana.",
         },
         {
           emoji: "🎲",
-          name: "Official Game Release",
+          name: "NFT Minting with In-Game Attributes",
           description:
-            "Launch the full Monopoly-inspired wagering platform for players to bet and compete.",
+            "Mint unique NFT properties with attributes affecting gameplay dynamics.",
+        },
+        {
+          emoji: "🔀",
+          name: "Dice Roll Randomness Integration",
+          description:
+            "Implement Verifiable Random Function (VRF) for secure, fair dice rolls.",
         },
       ],
     },
     {
-      title: "Phase 4: Staking & Ecosystem Growth",
+      title: "Phase 2 - Marketplace & Gameplay",
       items: [
         {
-          emoji: "💰",
-          name: "Staking Platform Rollout",
+          emoji: "🛒",
+          name: "In-Game Marketplace for NFT Trading",
           description:
-            "Introduce staking rewards like NFTs, in-game bonuses, or additional tokens for $MONO holders.",
+            "Build a decentralized marketplace for players to trade properties and assets.",
         },
         {
-          emoji: "🚀",
-          name: "Scaling the Ecosystem",
+          emoji: "💰",
+          name: "PvP Mechanics & Rent Collection Automation",
           description:
-            "Expand $MONO through partnerships, additional NFTs, and gameplay rewards.",
+            "Automate rent collection, property upgrades, and wagering mechanics through smart contracts.",
+        },
+        {
+          emoji: "🔗",
+          name: "Wallet Connection for Seamless Gameplay",
+          description:
+            "Integrate Solana wallets like Phantom and Solflare for secure transactions.",
+        },
+      ],
+    },
+    {
+      title: "Phase 3 - Multiplayer & DAO Integration",
+      items: [
+        {
+          emoji: "👥",
+          name: "Multiplayer Lobbies & Matchmaking",
+          description:
+            "Enable real-time multiplayer gaming with automated matchmaking.",
+        },
+        {
+          emoji: "🏆",
+          name: "Tournaments & Leaderboard System",
+          description:
+            "Introduce competitive tournaments with prize pools for top players.",
+        },
+        {
+          emoji: "⚖️",
+          name: "Governance & Staking Features",
+          description:
+            "Allow NFT holders to vote on ecosystem updates and earn passive income through staking.",
         },
       ],
     },
@@ -75,17 +76,23 @@ const Roadmap = () => {
   return (
     <section
       id="roadmap"
-      className="py-16 bg-gradient-to-b from-purple-900 via-black to-purple-900 text-white"
+      className="py-16 bg-cover bg-center text-white relative"
+      style={{
+        backgroundImage: "url('/artcore-studios-monopolyscreens04.jpg')",
+      }}
     >
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12">Roadmap</h2>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="container max-w-4xl mx-auto px-4 relative z-10">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Development Roadmap
+        </h2>
         <div className="space-y-10">
           {phases.map((phase, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="bg-gray-900 bg-opacity-80 rounded-2xl shadow-lg sm:p-6 p-4 hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-gradient">
+              <h3 className="text-2xl text-center md:text-start font-semibold mb-4 text-yellow-400">
                 {phase.title}
               </h3>
               <div className="space-y-6">
@@ -93,8 +100,10 @@ const Roadmap = () => {
                   <div key={i} className="flex items-start space-x-4">
                     <div className="text-3xl">{item.emoji}</div>
                     <div>
-                      <h4 className="text-xl font-semibold">{item.name}</h4>
-                      <p className="text-slate-300">{item.description}</p>
+                      <h4 className="text-xl font-semibold text-white">
+                        {item.name}
+                      </h4>
+                      <p className="text-gray-300">{item.description}</p>
                     </div>
                   </div>
                 ))}

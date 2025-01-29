@@ -19,7 +19,7 @@ const HowToBuy = () => {
         <h2 className="text-4xl font-bold mb-6">🧩 How to Buy $MONO</h2>
 
         {/* Step-by-Step Guide */}
-        <div className="max-w-3xl mx-auto text-left bg-gray-900/80 p-6 rounded-lg border border-gray-600">
+        <div className="max-w-4xl mx-auto text-left bg-gray-900/80 p-6 rounded-lg border border-gray-600">
           <ol className="list-decimal pl-5 space-y-4 text-sm md:text-base text-gray-200">
             <li>
               <strong>Download Phantom Wallet</strong>

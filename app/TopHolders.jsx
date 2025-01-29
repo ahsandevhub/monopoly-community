@@ -32,7 +32,48 @@ const TopHolders = () => {
   };
 
   if (loading) {
-    return <div className="text-center text-white py-10">Loading...</div>;
+    return (
+      <div
+        className="relative bg-cover bg-center bg-no-repeat min-h-screen"
+        style={{
+          backgroundImage: "url('/monopoly-board.jpg')", // Updated background
+        }}
+      >
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-gray-900/80 to-black/80"></div>
+        <div className="relative container mx-auto sm:py-20 py-10 px-6">
+          <div className="text-center py-10">
+            <div className="animate-pulse space-y-8">
+              {/* Top Heading Skeleton */}
+              <div className="h-8 bg-slate-600/60 rounded w-1/3 mx-auto mb-6"></div>
+
+              <div className="flex justify-between space-x-6">
+                {/* Left Side: Table Skeleton */}
+                <div className="w-1/2 space-y-4">
+                  <div className="h-8 bg-slate-600/60 rounded w-full mx-auto"></div>
+                  {[...Array(22)].map((_, index) => (
+                    <div
+                      key={index}
+                      className="h-6 bg-slate-600/60 rounded w-full mx-auto"
+                    ></div>
+                  ))}
+                </div>
+
+                {/* Right Side: Grid of 3 Cards Skeleton */}
+                <div className="w-1/2 grid grid-cols-3 gap-6">
+                  {[...Array(12)].map((_, index) => (
+                    <div key={index} className="space-y-4">
+                      <div className="h-8 bg-slate-600/60 rounded w-full mx-auto"></div>
+                      <div className="h-40 bg-slate-600/60 rounded w-full mx-auto"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

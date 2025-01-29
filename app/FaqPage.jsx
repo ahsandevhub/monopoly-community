@@ -28,7 +28,7 @@ const FaqPage = () => {
       <h2 className="md:text-4xl text-3xl font-bold text-center text-slate-100 mb-8">
         Frequently Asked Questions
       </h2>
-      <div className="max-w-4xl mx-auto space-y-4">
+      <div className="container max-w-4xl mx-auto space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}
