@@ -1,11 +1,12 @@
 "use client";
 
 import { Check, Copy } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 const Tokenomics = () => {
   const [copied, setCopied] = useState(false);
-  const tokenAddress = "GxiPTbd9NzAyudNGpQDwNZMoGmYFcy9FuxozXT3k25ig";
+  const tokenAddress = "6RS2so7t41LAWWtvD3CnPdRLQPtfBuoPUVVCQpQKmoon";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(tokenAddress);
@@ -45,14 +46,31 @@ const Tokenomics = () => {
         </div>
 
         {/* Meteora Link Button */}
-        <a
-          href="https://app.meteora.ag/pools/GxiPTbd9NzAyudNGpQDwNZMoGmYFcy9FuxozXT3k25ig"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition"
-        >
-          View on Meteora
-        </a>
+        <div className="flex flex-col w-max justify-center items-center mx-auto gap-4">
+          <a
+            href="https://solscan.io/account/vsVnPtSzYpgAVsLp7U5FKnk4o2xCsyHqgXJG39dqfTw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition"
+          >
+            View on LP
+          </a>
+          <a
+            href="https://docs.moonshot.cc/faq"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-100 hover:bg-gray-200 flex items-center gap-2 text-gray-900 font-bold py-3 px-6 rounded-lg transition"
+          >
+            <Image
+              width={50}
+              height={50}
+              src={"/meteora.svg"}
+              alt="meteora"
+              className="size-8"
+            />{" "}
+            View on Meteora
+          </a>
+        </div>
 
         {/* Airdrop Schedule */}
         <div className="mt-12 text-left max-w-4xl mx-auto bg-gray-900/80 p-6 rounded-lg border border-gray-600">

@@ -46,7 +46,7 @@ const HeroSection = () => {
           {/* Contract Address with Copy Icon */}
           <div
             className={`mt-6 flex flex-col md:flex-row items-center justify-center gap-2 md:text-xl text-base text-slate-50 cursor-pointer transition ${
-              copied ? "bg-purple-500/80" : "bg-yellow-500"
+              copied ? "bg-blue-500/80" : "bg-purple-500/80"
             } p-3 sm:p-0 sm:ps-3 overflow-hidden rounded`}
             onClick={handleCopy}
           >

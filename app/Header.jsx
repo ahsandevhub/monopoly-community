@@ -16,7 +16,7 @@ const Header = () => {
     { href: "#roadmap", label: "Roadmap" },
     { href: "#leaderboard", label: "Leaderboard" },
     { href: "#how-to-buy", label: "How to Buy" },
-    { href: "#community", label: "Community" },
+    { href: "https://t.me/monopolymemecoin", label: "Community" },
     { href: "#faq", label: "FAQ" },
   ];
 

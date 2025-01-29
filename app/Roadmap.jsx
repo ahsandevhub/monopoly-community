@@ -81,7 +81,7 @@ const Roadmap = () => {
         backgroundImage: "url('/artcore-studios-monopolyscreens04.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black backdrop-blur-sm bg-opacity-60"></div>
       <div className="container max-w-4xl mx-auto px-4 relative z-10">
         <h2 className="text-4xl font-bold text-center mb-12">
           Development Roadmap
