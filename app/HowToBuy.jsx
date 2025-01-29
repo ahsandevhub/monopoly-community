@@ -16,7 +16,7 @@ const HowToBuy = () => {
 
       {/* Content */}
       <div className="relative container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">How to Buy $MONO</h2>
+        <h2 className="text-4xl font-bold mb-6">🧩 How to Buy $MONO</h2>
 
         {/* Step-by-Step Guide */}
         <div className="max-w-3xl mx-auto text-left bg-gray-900/80 p-6 rounded-lg border border-gray-600">
@@ -65,12 +65,14 @@ const HowToBuy = () => {
             View on Dexscreener <ExternalLink size={18} />
           </a>
 
-          <button
-            disabled
-            className="bg-gray-700 text-gray-400 font-bold py-3 px-6 rounded-lg flex items-center gap-2 cursor-not-allowed"
+          <a
+            href="https://www.dextools.io/app/en/token/monopoly?t=1738153570039"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-lime-600 hover:bg-lime-700 text-gray-900 font-bold py-3 px-6 rounded-lg flex items-center gap-2"
           >
-            Coming Soon on Dextools <ExternalLink size={18} />
-          </button>
+            View on Dextools <ExternalLink size={18} />
+          </a>
         </div>
       </div>
     </section>

@@ -22,11 +22,11 @@ const Tokenomics = () => {
     >
       <div id="tokenomics" className="absolute -top-10"></div>
       {/* Red Overlay */}
-      <div className="absolute inset-0 bg-red-700/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-green-800/80 to-black/80"></div>
 
       {/* Content */}
       <div className="relative container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">Tokenomics</h2>
+        <h2 className="text-4xl font-bold mb-6">🪙 Tokenomics</h2>
 
         {/* Token Supply */}
         <p className="text-lg md:text-xl font-semibold mb-4">

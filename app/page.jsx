@@ -12,11 +12,11 @@ const HomePage = () => {
     <>
       <HeroSection />
       <About />
-      {/* <TokenStats /> */}
-      <Roadmap />
+      <Tokenmics />
       <HowToBuy />
       <TopHolders />
-      <Tokenmics />
+      {/* <TokenStats /> */}
+      <Roadmap />
       <FaqPage />
     </>
   );
