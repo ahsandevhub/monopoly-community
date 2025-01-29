@@ -53,7 +53,7 @@ const Tokenomics = () => {
             rel="noopener noreferrer"
             className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition"
           >
-            View on LP
+            Meteora Vault Authority
           </a>
           <a
             href="https://docs.moonshot.cc/faq"
@@ -68,7 +68,7 @@ const Tokenomics = () => {
               alt="moonshot"
               className="size-8"
             />{" "}
-            View on Moonshot
+            Moonshot
           </a>
         </div>
 

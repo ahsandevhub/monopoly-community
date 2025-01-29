@@ -16,7 +16,9 @@ const HowToBuy = () => {
 
       {/* Content */}
       <div className="relative container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">🧩 How to Buy $MONO</h2>
+        <h2 className="sm:text-4xl text-3xl font-bold mb-8">
+          <span className="hidden sm:block">🧩</span> How to Buy $MONO
+        </h2>
 
         {/* Step-by-Step Guide */}
         <div className="max-w-4xl mx-auto text-left bg-gray-900/80 p-6 rounded-lg border border-gray-600">

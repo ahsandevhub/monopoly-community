@@ -83,27 +83,32 @@ const Roadmap = () => {
     >
       <div className="absolute inset-0 bg-black backdrop-blur-sm bg-opacity-60"></div>
       <div className="container max-w-4xl mx-auto px-4 relative z-10">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl font-bold text-center md:mb-12 mb-8">
           Development Roadmap
         </h2>
         <div className="space-y-10">
           {phases.map((phase, index) => (
             <div
               key={index}
-              className="bg-gray-900 bg-opacity-80 rounded-2xl shadow-lg sm:p-6 p-4 hover:shadow-xl transition-shadow"
+              className="bg-gray-900 bg-opacity-80 rounded-2xl shadow-lg px-3 py-4 sm:p-5 md:p-6 hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-2xl text-center md:text-start font-semibold mb-4 text-yellow-400">
+              <h3 className="text-lg sm:text-xl md:text-2xl text-center md:text-start font-semibold mb-4 text-yellow-400">
                 {phase.title}
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {phase.items.map((item, i) => (
-                  <div key={i} className="flex items-start space-x-4">
-                    <div className="text-3xl">{item.emoji}</div>
+                  <div
+                    key={i}
+                    className="flex items-start space-x-3 sm:space-x-4"
+                  >
+                    <div className="text-2xl sm:text-3xl">{item.emoji}</div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white">
+                      <h4 className="text-base sm:text-lg md:text-xl font-semibold text-white">
                         {item.name}
                       </h4>
-                      <p className="text-gray-300">{item.description}</p>
+                      <p className="text-sm sm:text-base text-gray-300">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 ))}
