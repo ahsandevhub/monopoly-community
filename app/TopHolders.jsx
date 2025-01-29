@@ -18,7 +18,7 @@ const TopHolders = () => {
         const data = await response.json();
         setHolders(data.topHolders);
       } catch (error) {
-        console.error("Error fetching CSV data:", error);
+        console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
       }
@@ -28,74 +28,81 @@ const TopHolders = () => {
   }, []);
 
   const formatAccount = (account) => {
-    // Extract the first 3 and last 3 characters, and add "..."
     return account.slice(0, 3) + "..." + account.slice(-3);
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="text-center text-white py-10">Loading...</div>;
   }
 
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/C11u31-uHnS._SX1920_QL65_FMwebp_.webp')",
+        backgroundImage: "url('/monopoly-board.jpg')", // Updated background
       }}
     >
-      <div id="leaderboard" className="absolute -top-10"></div>
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gray-800/80"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-gray-900/80 to-black/80"></div>
 
       {/* Content */}
-      <div className="relative container mx-auto sm:py-20 py-10 px-4">
-        <h2 className="md:col-span-2 md:mb-12 mb-4 text-center md:text-4xl text-3xl text-slate-100 font-bold">
-          Top Holders
+      <div className="relative container mx-auto sm:py-20 py-10 px-6">
+        <h2 className="text-center text-4xl font-bold text-white mb-10">
+          🏆 Top Holders
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Holders Table */}
-          <table className="table-auto border border-gray-400 md:rounded-xl rounded-md overflow-hidden bg-slate-800/50 backdrop-blur sm:text-base text-xs w-full text-center text-slate-100 border-collapse">
-            <thead>
-              <tr className="bg-slate-700 *:px-1 *:py-2 *:sm:p-4 *:border *:border-slate-500">
-                <th>#</th>
-                <th>Image</th>
-                <th>Property</th>
-                <th>Account</th>
-                <th>Quantity</th>
-                <th className="break-all">Percentage</th>
-              </tr>
-            </thead>
-            <tbody>
-              {holders.map((holder, index) => (
-                <tr
-                  key={index}
-                  className="hover:bg-slate-600/50 *:px-1 *:py-2 *:sm:p-2 *:border *:border-slate-500"
-                >
-                  <td>{index + 1}</td>
-                  <td className="sm:w-20 w-16">
-                    <Image
-                      src={`/properties/${propertiesData[index]?.property}.jpg`}
-                      height={300}
-                      width={300}
-                      alt={propertiesData[index]?.property}
-                      className="size-full mx-auto rounded-md"
-                    />
-                  </td>
-                  <td>{propertiesData[index]?.property}</td>
-                  <td>{formatAccount(holder.Account)}</td>
-                  <td>{holder.Quantity.toLocaleString()}</td>
-                  <td>{holder.Percentage}%</td>
+          <div className="overflow-hidden rounded-lg border border-gray-600 bg-gray-900/90 backdrop-blur-lg shadow-lg">
+            <table className="w-full text-center text-white border-collapse">
+              <thead>
+                <tr className="bg-red-600 text-white *:px-2 *:py-3 *:border-b *:border-gray-500">
+                  <th>#</th>
+                  <th>Image</th>
+                  <th>Property</th>
+                  <th>Account</th>
+                  <th>Quantity</th>
+                  <th>Percentage</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {holders.map((holder, index) => (
+                  <tr
+                    key={index}
+                    className="*:px-2 *:py-3 *:border-b *:border-gray-600 odd:bg-gray-800/50 even:bg-gray-900/50 hover:bg-gray-700 transition"
+                  >
+                    <td className="font-bold text-lg">{index + 1}</td>
+                    <td className="w-16 sm:w-20">
+                      <Image
+                        src={`/properties/${propertiesData[index]?.property}.jpg`}
+                        height={300}
+                        width={300}
+                        alt={propertiesData[index]?.property}
+                        className="rounded-md"
+                      />
+                    </td>
+                    <td className="font-semibold">
+                      {propertiesData[index]?.property}
+                    </td>
+                    <td className="text-blue-400" title={holder.Account}>
+                      {formatAccount(holder.Account)}
+                    </td>
+                    <td className="font-semibold">
+                      {holder.Quantity.toLocaleString()}
+                    </td>
+                    <td className="font-semibold">{holder.Percentage}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-          {/* Properties owned by */}
+          {/* Properties Owned by Holders */}
           <div className="grid md:grid-cols-3 grid-cols-2 gap-4">
             {holders.map((holder, index) => (
               <div
                 key={index}
-                className="relative bg-gray-800 rounded-lg border border-gray-400 shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl"
+                className="relative bg-gray-800 rounded-lg border border-gray-500 shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-xl"
               >
                 <Image
                   src={`/properties/${propertiesData[index]?.property}.jpg`}
@@ -104,15 +111,15 @@ const TopHolders = () => {
                   alt={propertiesData[index]?.property}
                   className="w-full aspect-square object-cover"
                 />
-                <div className="p-2">
-                  <p className="text-center sm:text-lg text-base font-semibold text-slate-100">
+                <div className="p-3 text-center">
+                  <p className="text-lg font-bold text-white">
                     {propertiesData[index]?.property}
                   </p>
-                  <p className="text-center text-sm text-slate-400">
+                  <p className="text-sm text-gray-400">
                     Owner: {formatAccount(holder.Account)}
                   </p>
                 </div>
-                <div className="absolute top-2 left-2 border-2 text-white border-slate-50 z-10 h-8 w-8 flex items-center justify-center bg-red-600 shadow-lg rounded-full">
+                <div className="absolute top-2 left-2 border-2 text-white border-gray-200 bg-red-600 shadow-lg rounded-full h-8 w-8 flex items-center justify-center font-bold">
                   {index + 1}
                 </div>
               </div>
