@@ -86,6 +86,8 @@ const TopHolders = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-gray-900/80 to-black/80"></div>
 
+      <div id="leaderboard" className="absolute -top-10"></div>
+
       {/* Content */}
       <div className="relative container mx-auto sm:py-20 py-10 sm:px-6 px-4">
         <h2 className="text-center text-4xl font-bold text-white md:mb-10 mb-6">
@@ -95,7 +97,7 @@ const TopHolders = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Holders Table */}
           <div className="overflow-x-auto rounded-lg border border-gray-600 bg-gray-900/90 backdrop-blur-lg shadow-lg">
-            <table className="w-full min-w-[500px] text-center text-white border-collapse">
+            <table className="w-full h-full min-w-[500px] text-center text-white border-collapse">
               <thead>
                 <tr className="bg-red-600 text-white text-sm sm:text-base *:px-2 sm:*:px-3 *:py-2 sm:*:py-3 *:border-b *:border-gray-500">
                   <th className="whitespace-nowrap">#</th>
@@ -113,13 +115,13 @@ const TopHolders = () => {
                     className="text-sm sm:text-base *:px-2 sm:*:px-3 *:py-2 sm:*:py-3 *:border-b *:border-gray-600 odd:bg-gray-800/50 even:bg-gray-900/50 hover:bg-gray-700 transition"
                   >
                     <td className="font-bold">{index + 1}</td>
-                    <td className="w-10 sm:w-16">
+                    <td className="w-10 sm:w-24">
                       <Image
                         src={`/properties/${propertiesData[index]?.property}.jpg`}
                         height={300}
                         width={300}
                         alt={propertiesData[index]?.property}
-                        className="rounded-md w-10 sm:w-16"
+                        className="rounded-md w-10 sm:w-full"
                       />
                     </td>
                     <td className="font-semibold whitespace-nowrap">

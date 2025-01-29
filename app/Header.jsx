@@ -8,7 +8,6 @@ import { useState } from "react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Array for navigation links
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
@@ -21,7 +20,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="container mx-auto fixed z-50 md:top-3 top-0 left-1/2 md:rounded-lg -translate-x-1/2 bg-gradient-to-r from-purple-800/90 to-red-600/90 backdrop-blur text-white shadow-lg drop-shadow-lg overflow-hidden">
+    <header className="container mx-auto fixed z-50 md:top-3 top-0 left-1/2 md:rounded-lg -translate-x-1/2 bg-gradient-to-r from-purple-800/90 to-red-600/90 backdrop-blur text-white shadow-lg drop-shadow-lg">
       <div className="flex justify-between items-center px-4 py-3">
         {/* Logo */}
         <div className="flex items-center gap-3">
@@ -37,7 +36,7 @@ const Header = () => {
           </h1>
         </div>
 
-        {/* Menu Icon (Mobile) */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -45,19 +44,22 @@ const Header = () => {
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
 
-        {/* Navigation */}
+        {/* Navigation Menu */}
         <nav
-          className={`md:flex md:static top-16 left-0 w-full md:w-auto bg-red-800 md:bg-transparent shadow-md md:shadow-none pr-2 md:flex-row md:gap-6 md:items-center absolute md:top-0 md:left-0 transition-transform duration-300 ease-in-out ${
-            isOpen ? "translate-y-0" : "translate-y-[-300%]"
-          } md:translate-y-0`}
+          className={`absolute top-full left-0 w-full md:static md:w-auto 
+  bg-gradient-to-b from-red-800/90 to-purple-800/90 md:bg-none 
+  rounded-b-lg md:rounded-none shadow-md md:shadow-none 
+  transition-all duration-300 ease-in-out ${
+    isOpen ? "block" : "hidden"
+  } md:flex`}
         >
           <ul className="flex flex-col md:flex-row gap-6 font-medium md:items-center p-4 md:p-0">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.href}
-                  className="hover:bg-orange-600 px-4 py-2 font-medium transition block rounded-md"
-                  onClick={() => setIsOpen(false)} // Close the menu on link click
+                  className="hover:bg-orange-600 px-4 py-2 border-b shadow-lg font-medium transition block rounded-md"
+                  onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
