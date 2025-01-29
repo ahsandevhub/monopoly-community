@@ -59,16 +59,16 @@ const Tokenomics = () => {
             href="https://docs.moonshot.cc/faq"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-100 hover:bg-gray-200 flex items-center gap-2 text-gray-900 font-bold py-3 px-6 rounded-lg transition"
+            className="bg-gray-100 hover:bg-gray-200 flex items-center gap-2 text-gray-900 font-bold px-3 py-2 rounded-lg transition"
           >
             <Image
               width={50}
               height={50}
-              src={"/meteora.svg"}
-              alt="meteora"
+              src={"/moonshot.avif"}
+              alt="moonshot"
               className="size-8"
             />{" "}
-            View on Meteora
+            View on Moonshot
           </a>
         </div>
 
