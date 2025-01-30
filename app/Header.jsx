@@ -58,7 +58,7 @@ const Header = () => {
               <li key={index}>
                 <Link
                   href={link.href}
-                  className="hover:bg-orange-600 px-4 py-2 border-b shadow-lg font-medium transition block rounded-md"
+                  className="hover:bg-gradient-to-t from-orange-600 to-transparent px-4 py-2 border-b shadow-lg font-medium transition block rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
