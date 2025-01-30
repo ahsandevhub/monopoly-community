@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const FaqPage = () => {
@@ -23,41 +24,51 @@ const FaqPage = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-800 to-gray-700 py-12 md:py-[150px] px-4">
-      <div id="faq" className="absolute -top-10"></div>
-      <h2 className="md:text-4xl text-3xl font-bold text-center text-slate-100 mb-8">
-        Frequently Asked Questions
-      </h2>
-      <div className="container max-w-4xl mx-auto space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="border border-gray-600 rounded-lg overflow-hidden"
-          >
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full text-left bg-gray-700 px-4 py-3 text-slate-100 flex justify-between items-center"
+    <section className="bg-gradient-to-br from-[#0F0F1B] to-[#1A1A2E] sm:py-20 py-10 px-4">
+      <div id="faq" className="container scroll-mt-20 max-w-4xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-12">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-[#1E1E2F] border border-[#2A2A3D] rounded-xl overflow-hidden transition-all duration-300 hover:border-[#3A3A4D]"
             >
-              <span className="font-semibold">{faq.question}</span>
-              <span
-                className={`transform transition-transform ${
-                  openIndex === index ? "rotate-180" : "rotate-0"
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left p-6 flex justify-between items-center focus:outline-none"
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
+              >
+                <span className="text-lg md:text-xl font-semibold text-slate-100">
+                  {faq.question}
+                </span>
+                <span
+                  className={`transform transition-transform duration-300 text-purple-400 ${
+                    openIndex === index ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <ChevronDown />
+                </span>
+              </button>
+              <div
+                id={`faq-answer-${index}`}
+                className={`transition-all duration-300 overflow-hidden ${
+                  openIndex === index
+                    ? "max-h-[500px] opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
-                ▼
-              </span>
-            </button>
-            <div
-              className={`transition-max-height duration-300 overflow-hidden ${
-                openIndex === index ? "max-h-[200px] p-4" : "max-h-0"
-              } bg-gray-600 text-slate-200`}
-            >
-              {faq.answer}
+                <div className="px-6 border-t-2 border-purple-500 py-6 text-slate-300">
+                  {faq.answer}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
