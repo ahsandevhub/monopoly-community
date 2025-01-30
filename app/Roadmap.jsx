@@ -81,7 +81,7 @@ const Roadmap = () => {
         backgroundImage: "url('/artcore-studios-monopolyscreens04.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-black backdrop-blur-sm bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black backdrop-blur-sm bg-opacity-70"></div>
       <div className="container max-w-4xl mx-auto px-4 relative z-10">
         <h2 className="text-4xl font-bold text-center md:mb-12 mb-8">
           Development Roadmap
@@ -90,7 +90,7 @@ const Roadmap = () => {
           {phases.map((phase, index) => (
             <div
               key={index}
-              className="bg-gray-900 bg-opacity-80 rounded-2xl shadow-lg px-3 py-4 sm:p-5 md:p-6 hover:shadow-xl transition-shadow"
+              className="bg-gray-900 bg-opacity-80 rounded-2xl shadow-lg px-3 py-4 sm:p-5 md:p-6 hover:shadow-xl transition-shadow border border-gray-600"
             >
               <h3 className="text-lg sm:text-xl md:text-2xl text-center md:text-start font-semibold mb-4 text-yellow-400">
                 {phase.title}

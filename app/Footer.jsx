@@ -3,25 +3,30 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative text-white py-10">
+    <footer className="relative text-white py-10 sm:py-12">
+      {/* Background Image with Gradient Overlay */}
       <div
         className="absolute -z-10 inset-0 bg-cover bg-center"
-        // style={{ backgroundImage: "url('/modern-train.avif')" }}
         style={{ backgroundImage: "url('/suppdort.webp')" }}
       >
-        <div className="bg-gradient-to-b from-orange-600 to-red-800 h-full w-full"></div>
+        <div className="bg-gradient-to-b from-orange-600/90 to-red-800/90 h-full w-full"></div>
       </div>
+
+      {/* Content */}
       <div className="container mx-auto px-4 text-center">
-        <Image
-          height={50}
-          width={800}
-          src={"/monopoly-banner.png"}
-          alt="monopoly banner"
-          className="mx-auto w-96 h-auto"
-        />
+        {/* Monopoly Banner */}
+        <div className="mb-6 sm:mb-8">
+          <Image
+            height={50}
+            width={800}
+            src={"/monopoly-banner.png"}
+            alt="Monopoly Banner"
+            className="mx-auto w-64 sm:w-80 h-auto"
+          />
+        </div>
 
         {/* Social Media Links */}
-        <div className="flex justify-center gap-6 mb-6 text-lg">
+        <div className="flex justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
           {[
             {
               href: "https://dexscreener.com/solana/6rs2so7t41lawwtvd3cnpdrlqptfbuopuvvcqpqkmoon",
@@ -50,20 +55,20 @@ const Footer = () => {
                 width={48}
                 src={item.src}
                 alt={item.alt}
-                className="rounded-md w-12 shadow-lg hover:scale-105 transition-all border-2 h-12 sm:size-14 aspect-square"
+                className="rounded-md w-10 h-10 sm:w-12 sm:h-12 shadow-lg hover:scale-105 transition-all border-2 border-white/20 hover:border-yellow-400"
               />
             </Link>
           ))}
         </div>
 
         {/* Disclaimer */}
-        <p className="text-sm text-gray-300 max-w-2xl mx-auto">
+        <p className="text-sm text-gray-200 max-w-2xl mx-auto mb-4 sm:mb-6 px-4">
           For entertainment purposes only. Not financial advice. Invest
           responsibly.
         </p>
 
         {/* Copyright Notice */}
-        <p className="mt-4 text-white text-sm">
+        <p className="text-sm text-gray-300">
           &copy; {new Date().getFullYear()} Monopoly Community. All rights
           reserved.
         </p>
